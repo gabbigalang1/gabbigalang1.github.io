@@ -1,3 +1,12 @@
+@mixin width-more-than($width) {
+  @media (min-width: #{$width}) {
+    @content;
+  }
+}
+$tablet-breakpoint: 768px; 
+$desktop-breakpoint: 1280px;
+
+
 body {
   margin: 0; 
   padding: 0; 
@@ -10,19 +19,21 @@ body {
 }
 
 .col {
-  padding: 20px; 
+  padding: 10px; 
   border-left: 5px solid white;
+  @include width-more-than($tablet-breakpoint) {
+    padding: 20px; 
+  }
 }
 
 .hero {
   display: flex;
   margin: 0;
-
-
   background-size: cover;
   height: 100vh;
   justify-content: center;
   align-items: center;
+  margin-bottom: 100vh;
 }
 
 .hero-overlay {
@@ -51,12 +62,58 @@ body {
 
 .hero-title {
   margin-top: 0; 
-  font-size: 36px; 
+  font-size: 25px; 
   color: white;
+  @include width-more-than($tablet-breakpoint) {
+    font-size: 36px; 
+  }
 }
 
 .hero-subtitle {
-  font-size: 20px;
+  font-size: 18px;
   margin-top: 0; 
   color: white;
+  @include width-more-than($tablet-breakpoint) {
+    font-size: 20px;    
+  }
+}
+
+.card {
+  z-index: -1;
+  position: fixed;
+  background-color: #F1A9A0;
+  color: white;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-title {
+  position: absolute;
+  top: 50px;
+  left: 10vw;
+  font-size: 20px;
+  padding-left: 5px;
+  /* margin-bottom: 6px; */
+  border-left: 5px solid white;
+  @include width-more-than($desktop-breakpoint) {
+    font-size: 28px;
+  }
+}
+
+.row {
+  width: 80vw;
+}
+
+.about {
+  font-size: 20px; 
+  font-weight: 300; 
+  @include width-more-than($tablet-breakpoint) {
+    font-size: 32px; 
+  }
 }

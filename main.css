@@ -7,8 +7,11 @@ body {
   position: absolute; }
 
 .col {
-  padding: 20px;
+  padding: 10px;
   border-left: 5px solid white; }
+  @media (min-width: 768px) {
+    .col {
+      padding: 20px; } }
 
 .hero {
   display: flex;
@@ -16,7 +19,8 @@ body {
   background-size: cover;
   height: 100vh;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  margin-bottom: 100vh; }
 
 .hero-overlay {
   position: absolute;
@@ -45,12 +49,54 @@ body {
 
 .hero-title {
   margin-top: 0;
-  font-size: 36px;
+  font-size: 25px;
   color: white; }
+  @media (min-width: 768px) {
+    .hero-title {
+      font-size: 36px; } }
 
 .hero-subtitle {
-  font-size: 20px;
+  font-size: 18px;
   margin-top: 0;
   color: white; }
+  @media (min-width: 768px) {
+    .hero-subtitle {
+      font-size: 20px; } }
+
+.card {
+  z-index: -1;
+  position: fixed;
+  background-color: #F1A9A0;
+  color: white;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.card-title {
+  position: absolute;
+  top: 50px;
+  left: 10vw;
+  font-size: 20px;
+  padding-left: 5px;
+  /* margin-bottom: 6px; */
+  border-left: 5px solid white; }
+  @media (min-width: 1280px) {
+    .card-title {
+      font-size: 28px; } }
+
+.row {
+  width: 80vw; }
+
+.about {
+  font-size: 20px;
+  font-weight: 300; }
+  @media (min-width: 768px) {
+    .about {
+      font-size: 32px; } }
 
 /*# sourceMappingURL=main.css.map */
