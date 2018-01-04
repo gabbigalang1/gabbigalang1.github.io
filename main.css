@@ -99,4 +99,19 @@ body {
     .about {
       font-size: 32px; } }
 
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 25px; }
+
+.social-icons--left {
+  margin-right: 20px; }
+
+.social-icons__icon-block img {
+  height: 40px; }
+
 /*# sourceMappingURL=main.css.map */
