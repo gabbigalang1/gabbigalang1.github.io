@@ -21,7 +21,11 @@
         <!-- Add your site or application content here -->
        
         <div class = "hero">
-          <img class = "hero-img" src = "hero-img.jpg"/>
+          <picture>
+            <source media="(min-width: 1280px)" srcset="http://res.cloudinary.com/dkym2f2nr/image/fetch/d_default-img.jpg/w_2560,h_1400,c_fill/http://gabbigalang.com/hero-img.jpg">
+            <source media="(min-width: 768px)" srcset="http://res.cloudinary.com/dkym2f2nr/image/fetch/d_default-img.jpg/w_1536,h_2048,c_fill,g_north_east/http://gabbigalang.com/hero-img.jpg">
+            <img class = "hero-img" src = "http://res.cloudinary.com/dkym2f2nr/image/fetch/d_default-img.jpg/w_750,h_1440,c_fill,g_north_east/http://gabbigalang.com/hero-img.jpg"/>
+          </picture>
           <div class = "hero-overlay"></div>
           <div class = "hero-overlay-text">
             <div class = "col">
