@@ -79,7 +79,7 @@ body {
 
 .card-title {
   position: absolute;
-  top: 50px;
+  top: 20px;
   left: 10vw;
   font-size: 20px;
   padding-left: 5px;
@@ -88,6 +88,27 @@ body {
   @media (min-width: 1280px) {
     .card-title {
       font-size: 28px; } }
+
+.card__cta-block {
+  margin-top: 20px; }
+  @media (min-width: 1280px) {
+    .card__cta-block {
+      margin-top: 0; } }
+
+.card__cta {
+  transition: background-color 0.3s ease;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  background-color: #6C7A89;
+  font-size: 18px;
+  border-radius: 4px; }
+  .card__cta:hover {
+    color: #6C7A89;
+    background-color: white; }
+  @media (min-width: 1280px) {
+    .card__cta {
+      font-size: 20px; } }
 
 .row {
   width: 80vw; }
